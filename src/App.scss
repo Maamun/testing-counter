@@ -1,5 +1,8 @@
+$mainBg: #bada55;
+
 .App {
   text-align: center;
+  background: $mainBg;
 }
 
 .App-logo {
@@ -9,7 +12,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite
+      20s linear;
   }
 }
 
