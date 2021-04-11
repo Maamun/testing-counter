@@ -1,0 +1,99 @@
+/*----------  Colors  ----------*/
+
+$BG: #ddeefc;
+$Box-shadow: #5a7494;
+$wrapper-bg: #fff;
+$clr-increment: #17b890;
+$clr-decrement: #f64740;
+$clr-text: #182825;
+$clr-btn: #2364d2;
+
+/*----------  Google Fonts  ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/*----------  Reset  ----------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  background: $BG;
+  height: 100vh;
+  display: flex;
+  font-family: 'Fredoka One', cursive;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 570px;
+    border-radius: 0.8rem;
+    background: $wrapper-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $clr-text;
+    padding: 5rem 2rem;
+    box-shadow: 0 30px 60px 0
+      rgba(90, 116, 148, 0.4);
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 6rem;
+    }
+    .btn-wrapper {
+      display: flex;
+      max-width: 80%;
+      gap: 1rem;
+      .btn {
+        border: none;
+        border-radius: 50%;
+        background: $clr-btn;
+        color: #fff;
+        font-weight: bold;
+        font-size: 3rem;
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 3px 10px 20px 0px
+          rgba(35, 100, 210, 0.3);
+        &:hover {
+          scale: 1.1;
+        }
+      }
+      .input {
+        transition: all 0.3s ease-in-out;
+        border: 1px solid #ced6e0;
+        padding: 5px 15px;
+        background: none;
+        color: #1a3b5d;
+        border-radius: 5px;
+        font-size: 3rem;
+        max-width: 50%;
+        text-align: center;
+
+        font-family: 'Source Sans Pro',
+          sans-serif;
+
+        &:focus {
+          box-shadow: 0px 10px 20px -13px
+            rgba(32, 56, 117, 0.35);
+          outline: none;
+        }
+        &:hover {
+          border-color: #3d9cff;
+        }
+        &::placeholder {
+          color: red;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
