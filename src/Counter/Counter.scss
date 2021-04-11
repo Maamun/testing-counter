@@ -44,6 +44,7 @@ $clr-btn: #2364d2;
     }
     p {
       font-size: 6rem;
+      color: #5a7494;
     }
     .btn-wrapper {
       display: flex;
@@ -95,5 +96,23 @@ $clr-btn: #2364d2;
         }
       }
     }
+  }
+}
+
+.negative {
+  color: $clr-decrement !important;
+  animation: pulse 500ms ease-in-out;
+}
+.positive {
+  color: $clr-increment !important;
+  animation: pulse 500ms ease-in-out;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
   }
 }

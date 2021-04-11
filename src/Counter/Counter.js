@@ -9,25 +9,39 @@ function Counter() {
     inputValue,
     setInputValue,
   ] = useState(1);
-  function subtract() {
+  const addCounter = () => {
     setCounterValue(
-      counterValue - inputValue
+      counterValue + Number(inputValue)
     );
-  }
+  };
   return (
     <div className="App">
       <div className="wrapper">
         <h1 data-testid="header">
           My Counter
         </h1>
-        <p data-testid="counter">
+        <p
+          data-testid="counter"
+          className={
+            counterValue > 0
+              ? 'positive'
+              : counterValue < 0
+              ? 'negative'
+              : null
+          }
+        >
           {counterValue}
         </p>
         <div className="btn-wrapper">
           <button
             className="btn"
             data-testid="substract-btn"
-            onClick={subtract}
+            onClick={() => {
+              setCounterValue(
+                counterValue -
+                  Number(inputValue)
+              );
+            }}
           >
             -
           </button>
@@ -46,6 +60,7 @@ function Counter() {
           <button
             className="btn"
             data-testid="add-btn"
+            onClick={addCounter}
           >
             +
           </button>
